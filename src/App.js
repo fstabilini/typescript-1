@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Profile from "./Components/Profile";
+import Counter from "./Components/Counter";
+import UserCard from "./Components/UserCard";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile />
+      <br></br>
+      <br></br>
+      <br></br>
+      <Counter />
+      <br></br>
+      <br></br>
+      <br></br>
+      <h2>Hardcodeado:</h2>
+      <UserCard name="Alice" age={30} occupation="Engineer" />
+      <UserCard name="Bob" age={25} occupation="Designer" />
     </div>
   );
-}
+};
 
 export default App;
